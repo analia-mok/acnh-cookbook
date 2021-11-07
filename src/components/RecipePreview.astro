@@ -1,0 +1,32 @@
+---
+export interface Props {
+  recipe: any,
+}
+
+const { recipe } = Astro.props;
+const ingredients = recipe.ingredients || [];
+---
+
+<article>
+  <header class="mb-2 text-center">
+    {recipe.thumbnail && <img src={Astro.resolve(`/assets/misc/${recipe.thumbnail}`)} alt={recipe.title} class="inline-block">}
+    <a href={recipe.url} class="hover:underline">
+      <h2 class="font-bold text-xl">{recipe.title}</h2>
+    </a>
+  </header>
+  <ul class="list-none">
+    {ingredients.map(item => (
+      <li>
+        {item.type === 'fish' && <img src={`https://acnhapi.com/v1/icons/fish/${item.id}`} alt={item.name} class="inline-block w-16 h-auto">}
+        {item.type === 'misc' && <img src={Astro.resolve(`/assets/misc/${item.id}`)} alt={item.name} class="inline-block w-16 h-auto">}
+        {item.type === 'fish' && (
+          <a href={`/fish/${item.id}`} class="hover:underline">
+            <span class="font-medium mx-2">{item.name}</span>
+          </a>
+        )}
+        {item.type !== 'fish' && <span class="font-medium mx-2">{item.name}</span>}
+        <span class="bg-yellow-100 text-yellow-800 inline-block px-2 py-1 rounded-md font-medium">x{item.quantity}</span>
+      </li>
+    ))}
+  </ul>
+</article>

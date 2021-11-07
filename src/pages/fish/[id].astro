@@ -1,0 +1,41 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import BlogHeader from '../../components/BlogHeader.astro';
+
+export async function getStaticPaths() {
+  // @todo do something like https://docs.astro.build/reference/api-reference/#data-passing-with-props
+  return [
+    // Horse Mackerel
+    { params: { id: '57' } }
+  ];
+}
+
+const { id } = Astro.request.params;
+const response = await fetch(`https://acnhapi.com/v1a/fish/${id}`);//.then(res => res.json());
+const data = await response.json();
+
+// console.log(data);
+
+let title = data.name['name-USen'] + ' | Fish';
+let description = 'Am fish';
+let permalink = 'https://example.com';
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} permalink={permalink} />
+
+    <link rel="stylesheet" href={Astro.resolve('../../global.css')}>
+  </head>
+  <body>
+    <BlogHeader />
+
+    <article class="container mx-auto">
+      <h1>{data.name['name-USen']}</h1>
+      <p>Price: {data.price}</p>
+      <p>CJ Price: {data['price-cj']}</p>
+      <p>Location: {data.location}</p>
+      <p>{data['catch-phrase']}</p>
+    </article>
+  </body>
+</html>

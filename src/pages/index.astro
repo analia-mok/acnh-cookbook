@@ -1,0 +1,68 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
+import RecipePreview from '../components/RecipePreview.astro';
+
+interface MarkdownFrontmatter {
+  publishDate: number;
+};
+
+interface RecipeMarkdownFrontmatter {
+  title: string;
+};
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'ACNH Cookbook';
+let description = 'Search for all the yummy goodness that was released in the ACNH 2.0 update!';
+let permalink = 'https://example.com/';
+
+// Data Fetching: List all Markdown posts in the repo.
+
+// let allPosts = Astro.fetchContent<MarkdownFrontmatter>('./posts/*.md');
+// allPosts = allPosts.sort((a, b) => new Date(b.publishDate).valueOf() - new Date(a.publishDate).valueOf());
+
+let allRecipes = Astro.fetchContent<RecipeMarkdownFrontmatter>('./recipes/*.md');
+allRecipes = allRecipes.sort((a, b) => a.title.localeCompare(b.title));
+
+// let response = await fetch('https://acnhapi.com/v1a/fish/1');
+// let data = await response.json();
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} permalink={permalink} />
+
+    <link rel="stylesheet" href={Astro.resolve('../global.css')}>
+  </head>
+
+  <body class="bg-yellow-50">
+    <BlogHeader />
+    <div class="layout">
+      <main class="content">
+        <section class="intro mb-8 text-center">
+          <h1 class="text-4xl font-bold">WIP: {title}</h1>
+          <p>{description}</p>
+        </section>
+        <section class="container mx-auto" aria-label="Recipes list">
+          <div class="flex flex-wrap flex-shrink">
+            {allRecipes.map(r => (
+              <div
+                class="w-1/4 p-6 mr-4 mb-4 bg-white rounded-md border-8 border-white shadow-md"
+                style="max-width: calc(25% - 1rem)"
+              >
+                <RecipePreview recipe={r} />
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
