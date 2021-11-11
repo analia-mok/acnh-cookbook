@@ -1,5 +1,6 @@
 ---
 title: 'Sea-Bass Pie'
+thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrFishdishBassCropped.png'
 ingredients:
   -
     id: 59
@@ -7,7 +8,8 @@ ingredients:
     type: 'fish'
     quantity: 1
   -
-    id: 'flour-icon.png'
+    id: 'flour'
+    thumbnail: 'https://acnhcdn.com/2.0/FtrIcon/FlourWheatCropped.png'
     name: 'Flour'
     type: 'misc'
     quantity: 3

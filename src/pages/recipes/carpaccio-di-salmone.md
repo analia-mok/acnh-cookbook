@@ -1,5 +1,6 @@
 ---
 title: 'Carpaccio Di Salmone'
+thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrCarpaccioSalmonCropped.png'
 ingredients:
   -
     id: 61

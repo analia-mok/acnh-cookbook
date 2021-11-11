@@ -42,19 +42,19 @@ allRecipes = allRecipes.sort((a, b) => a.title.localeCompare(b.title));
     <link rel="stylesheet" href={Astro.resolve('../global.css')}>
   </head>
 
-  <body class="bg-yellow-50">
+  <body class="bg-yellow-100 font-serif">
     <BlogHeader />
     <div class="layout">
       <main class="content">
-        <section class="intro mb-8 text-center">
-          <h1 class="text-4xl font-bold">WIP: {title}</h1>
+        <section class="intro mb-8 text-center text-orange-900 pb-8">
+          <h1 class="text-4xl font-bold mb-4">WIP: {title}</h1>
           <p>{description}</p>
         </section>
         <section class="container mx-auto" aria-label="Recipes list">
           <div class="flex flex-wrap flex-shrink">
             {allRecipes.map(r => (
               <div
-                class="w-1/4 p-6 mr-4 mb-4 bg-white rounded-md border-8 border-white shadow-md"
+                class="w-1/4 p-6 mr-4 mb-4 bg-orange-50 border-8 border-white rounded-md shadow-md flex items-center"
                 style="max-width: calc(25% - 1rem)"
               >
                 <RecipePreview recipe={r} />
