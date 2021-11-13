@@ -40,9 +40,15 @@ allRecipes = allRecipes.sort((a, b) => a.title.localeCompare(b.title));
         <section class="intro mb-8 text-center text-orange-900 pt-6 pb-8">
           <h1 class="text-4xl font-bold mb-4">Recipes</h1>
           <p>Search for all the yummy goodness that was released in the ACNH 2.0 update!</p>
+          <p>
+            Images sourced from <a href="https://acnhcdn.com/" class="underline">ACNH CDN</a> and <a href="https://acnhapi.com/doc" class="underline">ACNH API</a>
+          </p>
         </section>
         <RecipeList recipes={allRecipes} />
       </main>
     </div>
+    <footer class="text-center py-16">
+      <p class="text-orange-800">Powered by <a href="https://astro.build/" class="underline">Astro</a> and <a href="https://tailwindcss.com/" class="underline">Tailwind CSS</a></p>
+    </footer>
   </body>
 </html>
