@@ -9,7 +9,6 @@ ingredients:
     quantity: 1
   -
     id: 'flour'
-    thumbnail: 'https://acnhcdn.com/2.0/FtrIcon/FlourWheatCropped.png'
     name: 'Flour'
     type: 'misc'
     quantity: 3

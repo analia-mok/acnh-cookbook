@@ -10,7 +10,6 @@ ingredients:
   -
     id: 'flour'
     name: 'Flour'
-    thumbnail: 'https://acnhcdn.com/2.0/FtrIcon/FlourWheatCropped.png'
     type: 'misc'
     quantity: 1
 layout: '../../layouts/RecipeDetail.astro'

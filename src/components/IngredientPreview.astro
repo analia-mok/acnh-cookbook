@@ -1,0 +1,49 @@
+---
+export interface Ingredient {
+  id: string,
+  name: string,
+  type: string,
+  quantity?: number
+}
+
+export interface Props {
+  ingredient: Ingredient,
+}
+
+const commonIngredientImages = {
+  flour: 'FlourWheatCropped.png',
+  wholeWheatFlour: 'FlourWheatwholeCropped.png',
+  sugar: 'FlourSugarCropped.png',
+  brownSugar: 'FlourSugarbrownCropped.png'
+};
+
+const fruitImages = {
+  apple: 'AppleCropped.png'
+};
+
+const { ingredient } = Astro.props;
+let baseImageUrl = 'https://acnhcdn.com/2.0/MenuIcon/';
+let itemUrl = '';
+
+if (ingredient.type === 'fish') {
+  baseImageUrl = 'https://acnhapi.com/v1/icons/fish/';
+  itemUrl = `${baseImageUrl}${ingredient.id}`;
+} else if (ingredient.type === 'fruit') {
+  itemUrl = `https://acnhcdn.com/2.0/FtrIcon/${fruitImages[ingredient.id]}`;
+} else {
+  itemUrl = `${baseImageUrl}${commonIngredientImages[ingredient.id]}`;
+}
+
+
+---
+
+<div>
+  <img src={itemUrl} alt={ingredient.name} class="inline-block w-11 h-auto mb-2">
+  {ingredient.type === 'fish' && (
+    <a href={`/fish/${ingredient.id}`} class="hover:underline">
+      <span class="text-orange-900 font-medium mx-4">{ingredient.name}</span>
+    </a>
+  )}
+  {ingredient.type !== 'fish' && <span class="text-orange-900 font-medium ml-4 mr-2">{ingredient.name}</span>}
+  <span class="bg-green-100 text-green-900 inline-block px-2 py-1 rounded-md font-medium">x {ingredient.quantity}</span>
+</div>
