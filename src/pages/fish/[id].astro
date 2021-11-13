@@ -6,7 +6,6 @@ export async function getStaticPaths() {
   // @todo do something like https://docs.astro.build/reference/api-reference/#data-passing-with-props
   const data = await fetch(`https://acnhapi.com/v1a/fish/`).then(res => res.json());
   return data.map(item => {
-    console.log(item);
     return {
       params: { id: `${item.id}` },
       props: { ...item }
