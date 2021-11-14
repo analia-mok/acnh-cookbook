@@ -9,7 +9,6 @@ ingredients:
     quantity: 1
   -
     id: 'flour'
-    name: 'Flour'
     type: 'misc'
     quantity: 3
 layout: '../../layouts/RecipeDetail.astro'
