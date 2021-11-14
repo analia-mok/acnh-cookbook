@@ -4,10 +4,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import RecipeList from '../components/RecipeList.astro';
 
-interface MarkdownFrontmatter {
-  publishDate: number;
-};
-
 interface RecipeMarkdownFrontmatter {
   title: string;
 };
@@ -18,7 +14,7 @@ interface RecipeMarkdownFrontmatter {
 // All variables are available to use in the HTML template below.
 let title = 'ACNH Cookbook';
 let description = 'Search for all the yummy goodness that was released in the ACNH 2.0 update!';
-let permalink = 'https://example.com/';
+let permalink = 'https://acnh-cookbook.netlify.app';
 
 // Data Fetching: List all Markdown posts in the repo.
 

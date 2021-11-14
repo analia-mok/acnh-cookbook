@@ -4,23 +4,19 @@ thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrSkilletMushroomCropped.png'
 ingredients:
   -
     id: 'round'
-    name: 'Round Mushroom'
     quantity: 1
-    type: 'mushroom'
+    type: 'mushy'
   -
     id: 'flat'
-    name: 'Flat Mushroom'
     quantity: 1
-    type: 'mushroom'
+    type: 'mushy'
   -
     id: 'skinny'
-    name: 'Skinny Mushroom'
     quantity: 1
-    type: 'mushroom'
+    type: 'mushy'
   -
     id: 'rare'
-    name: 'Rare Mushroom'
     quantity: 1
-    type: 'mushroom'
+    type: 'mushy'
 layout: '../../layouts/RecipeDetail.astro'
 ---
