@@ -1,5 +1,7 @@
 # ACNH Cookbook
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/324dc46f-195c-4a84-b500-039e97b12f81/deploy-status)](https://app.netlify.com/sites/acnh-cookbook/deploys)
+
 An Animal Crossing: New Horizons recipe site - featuring the new cooking recipes released with the 2.0 update.
 
 ## 🧞 Commands
