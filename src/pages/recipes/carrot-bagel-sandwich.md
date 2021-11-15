@@ -1,6 +1,7 @@
 ---
 title: 'Carrot Bagel Sandwich'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrBeaglesandCarrotCropped.png'
+type: savory
 ingredients:
   -
     id: 'wholeWheatFlour'

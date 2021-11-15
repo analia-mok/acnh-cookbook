@@ -1,6 +1,7 @@
 ---
 title: 'Frosted Pretzels'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPretzelSugarCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

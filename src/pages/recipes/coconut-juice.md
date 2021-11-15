@@ -1,6 +1,7 @@
 ---
 title: 'Coconut Juice'
 thumbnail: 'https://acnhcdn.com/latest/DIYRecipeIcon/FtrCoconutjuice.png'
+type: sweet
 ingredients:
   -
     id: 'coconut'

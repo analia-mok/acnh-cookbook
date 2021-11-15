@@ -2,7 +2,7 @@
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import RecipeList from '../components/RecipeList.astro';
+import RecipeSearch from '../components/RecipeSearch.jsx';
 
 interface RecipeMarkdownFrontmatter {
   title: string;
@@ -33,14 +33,15 @@ allRecipes = allRecipes.sort((a, b) => a.title.localeCompare(b.title));
     <Header />
     <div class="layout">
       <main class="content">
-        <section class="intro mb-8 text-center text-orange-900 pt-6 pb-8 px-4">
+        <section class="intro mb-8 text-center text-orange-900 py-6 px-4">
           <h1 class="text-4xl font-bold mb-4">Recipes</h1>
           <p>Search for all the yummy goodness that was released in the ACNH 2.0 update!</p>
           <p>
             Images sourced from <a href="https://acnhcdn.com/" class="underline">ACNH CDN</a> and <a href="https://acnhapi.com/doc" class="underline">ACNH API</a>
           </p>
         </section>
-        <RecipeList recipes={allRecipes} />
+
+        <RecipeSearch recipes={allRecipes} client:load />
       </main>
     </div>
     <footer class="text-center py-16">

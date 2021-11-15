@@ -1,6 +1,7 @@
 ---
 title: 'Gnocchi Di Patate'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrGnocchiPotatoCropped.png'
+type: savory
 ingredients:
   -
     id: 'flour'

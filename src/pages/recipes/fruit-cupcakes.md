@@ -1,6 +1,7 @@
 ---
 title: 'Fruit Cupcakes'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrCupcakeFruitsCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

@@ -1,6 +1,7 @@
 ---
 title: 'Fish and Chips'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrFishandchipsCropped.png'
+type: savory
 ingredients:
   -
     id: 'potato'

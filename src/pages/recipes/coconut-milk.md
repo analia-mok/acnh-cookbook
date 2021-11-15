@@ -1,6 +1,7 @@
 ---
 title: 'Coconut Milk'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrSmoothieCoconut.png'
+type: sweet
 ingredients:
   -
     id: 'coconut'

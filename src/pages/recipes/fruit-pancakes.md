@@ -1,6 +1,7 @@
 ---
 title: 'Fruit-Topped Pancakes'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPancakeFruitsCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

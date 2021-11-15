@@ -1,6 +1,7 @@
 ---
 title: 'Aji Fry'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrFishdishHorsemackereCropped.png'
+type: savory
 ingredients:
   -
     id: 57
@@ -11,5 +12,6 @@ ingredients:
     id: 'flour'
     type: 'misc'
     quantity: 1
+
 layout: '../../layouts/RecipeDetail.astro'
 ---

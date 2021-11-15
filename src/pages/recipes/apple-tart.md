@@ -1,6 +1,7 @@
 ---
 title: 'Apple Tart'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrTartAppleCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

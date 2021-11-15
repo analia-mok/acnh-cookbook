@@ -4,6 +4,31 @@ import RecipePreview from './RecipePreview.astro';
 const { recipes } = Astro.props;
 ---
 
+<section class="container mx-auto max-w-3xl pb-12">
+  <form action="#" class="flex justify-between flex-wrap sm:flex-nowrap mx-8">
+    <input type="text" name="search" id="search"
+      class="
+        w-full
+        sm:w-auto
+        flex-grow
+        mb-4
+        sm:mb-0
+        sm:mr-8
+        rounded-md
+        border-orange-800
+        border-2
+        focus:border-orange-600 focus:ring-0"
+    >
+    <select name="filters" id="filters"
+      class="w-full md:w-auto rounded-md border-orange-800 border-2 focus:border-orange-600 pl-6 focus:bg-white focus:ring-0"
+    >
+      <option value="savory">Savory</option>
+      <option value="sweet">Sweet</option>
+      <option value="misc">Misc</option>
+    </select>
+  </form>
+</section>
+
 <section class="container mx-auto" aria-label="Recipes list">
   <div class="flex flex-wrap flex-shrink">
     {recipes.map(r => (

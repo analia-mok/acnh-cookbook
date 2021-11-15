@@ -1,6 +1,7 @@
 ---
 title: 'French Fries'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrChips.png'
+type: savory
 ingredients:
   -
     id: 'potato'

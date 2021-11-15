@@ -1,6 +1,7 @@
 ---
 title: 'Fruit Salad'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrSaladbowlFruitsCropped.png'
+type: sweet
 ingredients:
   -
     id: 'apple'

@@ -1,6 +1,7 @@
 ---
 title: 'Fruit Basket'
 thumbnail: 'https://acnhcdn.com/latest/DIYRecipeIcon/FtrFruitbasket.png'
+type: misc
 ingredients:
   -
     id: 'apple'

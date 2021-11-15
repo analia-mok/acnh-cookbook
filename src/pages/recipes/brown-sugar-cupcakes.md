@@ -1,6 +1,7 @@
 ---
 title: 'Brown Sugar Cupcakes'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrCupcakeBlacksugerCropped.png'
+type: sweet
 ingredients:
   -
     id: 'wholeWheatFlour'

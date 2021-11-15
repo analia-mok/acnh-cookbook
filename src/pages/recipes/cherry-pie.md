@@ -1,6 +1,7 @@
 ---
 title: 'Cherry Pie'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPieCherryCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

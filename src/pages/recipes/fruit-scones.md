@@ -1,6 +1,7 @@
 ---
 title: 'Fruit Scones'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrSconeFruitsCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

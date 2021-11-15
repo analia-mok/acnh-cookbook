@@ -1,6 +1,7 @@
 ---
 title: 'Apple Smoothie'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrSmoothieAppleCropped.png'
+type: sweet
 ingredients:
   -
     id: 'apple'

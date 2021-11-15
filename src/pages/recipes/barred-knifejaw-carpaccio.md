@@ -1,6 +1,7 @@
 ---
 title: 'Barred-knifejaw Carpaccio'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrCarpaccioBeakfishCropped.png'
+type: savory
 ingredients:
   -
     id: 'barred_knifejaw'

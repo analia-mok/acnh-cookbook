@@ -1,6 +1,7 @@
 ---
 title: 'Sea-Bass Pie'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrFishdishBassCropped.png'
+type: savory
 ingredients:
   -
     id: 59

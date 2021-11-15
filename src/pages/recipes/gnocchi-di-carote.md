@@ -1,6 +1,7 @@
 ---
 title: 'Gnocchi Di Carote'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrGnocchiCarrotCropped.png'
+type: savory
 ingredients:
   -
     id: 'flour'

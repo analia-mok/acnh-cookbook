@@ -1,6 +1,7 @@
 ---
 title: 'Coconut Pancakes'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPancakeCocconutCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

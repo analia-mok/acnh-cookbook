@@ -1,6 +1,7 @@
 ---
 title: 'Gratin'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrGratinCropped.png'
+type: savory
 ingredients:
   -
     id: 'flour'

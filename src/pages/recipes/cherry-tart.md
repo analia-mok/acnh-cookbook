@@ -1,6 +1,7 @@
 ---
 title: 'Cherry Tart'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrTartCherryCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

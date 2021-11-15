@@ -1,6 +1,7 @@
 ---
 title: 'Carrot Cake'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrTartCarrotCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

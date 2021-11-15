@@ -1,6 +1,7 @@
 ---
 title: 'Coconut Pudding'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrJellyCoconutCropped.png'
+type: sweet
 ingredients:
   -
     id: 'sugar'

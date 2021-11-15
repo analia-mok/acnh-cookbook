@@ -1,6 +1,7 @@
 ---
 title: 'Cookies'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrCookiePlainCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

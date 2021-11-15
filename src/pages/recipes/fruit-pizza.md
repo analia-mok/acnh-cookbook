@@ -1,6 +1,7 @@
 ---
 title: 'Fruit Pizza'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPizzaFruitsCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

@@ -1,6 +1,7 @@
 ---
 title: 'Champinones Al Ajillo'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrSkilletMushroomCropped.png'
+type: savory
 ingredients:
   -
     id: 'round'

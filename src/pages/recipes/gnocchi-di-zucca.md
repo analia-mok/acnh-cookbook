@@ -1,6 +1,7 @@
 ---
 title: 'Gnocchi Di Zucca'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrGnocchiPumpkinCropped.png'
+type: savory
 ingredients:
   -
     id: 'flour'

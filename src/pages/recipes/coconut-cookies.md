@@ -1,6 +1,7 @@
 ---
 title: 'Coconut Cookies'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrCookieCoconut.png'
+type: sweet
 ingredients:
   -
     id: 'flour'

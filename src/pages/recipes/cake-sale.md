@@ -1,6 +1,7 @@
 ---
 title: 'Cake Sale'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPoundcakeVegetableCropped.png'
+type: sweet
 ingredients:
   -
     id: 'flour'
