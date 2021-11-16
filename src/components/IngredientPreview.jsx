@@ -18,6 +18,10 @@ export default function IngredientPreview({ ingredient }) {
       title: 'Brown Sugar',
       image: 'FlourSugarbrownCropped.png'
     },
+    weed: {
+      title: 'Weed',
+      image: 'Weed.png',
+    },
   };
 
   const crop = {
@@ -64,6 +68,14 @@ export default function IngredientPreview({ ingredient }) {
     sugarCane: {
       title: 'Sugarcane',
       image: 'SugarCaneCropped.png',
+    },
+    tomato: {
+      title: 'Tomato',
+      image: 'TomatoCropped.png',
+    },
+    turnip: {
+      title: 'Turnip',
+      image: 'KabuCropped.png',
     },
     wheat: {
       title: 'Wheat',

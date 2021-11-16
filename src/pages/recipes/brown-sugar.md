@@ -1,6 +1,6 @@
 ---
 title: 'Brown Sugar'
-thumbnail: 'https://acnhcdn.com/2.0/MenuIcon/FlourSugarbrownCropped.png'
+thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FlourSugarbrownCropped.png'
 type: sweet
 ingredients:
   -
