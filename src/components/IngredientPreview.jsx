@@ -18,6 +18,10 @@ export default function IngredientPreview({ ingredient }) {
       title: 'Brown Sugar',
       image: 'FlourSugarbrownCropped.png'
     },
+    tomatoPuree: {
+      title: 'Tomato Puree',
+      image: 'FtrJarTomato.png'
+    },
     weed: {
       title: 'Weed',
       image: 'Weed.png',
@@ -89,6 +93,22 @@ export default function IngredientPreview({ ingredient }) {
     clam: {
       title: 'Clam',
       image: 'ShellFishAsari.png',
+    },
+    tiger_prawn: {
+      title: 'Tiger Prawn',
+      image: 'KurumaebiCropped.png',
+    },
+    squid: {
+      title: 'Squid',
+      image: 'HotaruikaCropped.png',
+    },
+    sweet_shrimp: {
+      title: 'Sweet Shrimp',
+      image: 'AmaebiCropped.png',
+    },
+    seaweed: {
+      title: 'Seaweed',
+      image: 'WakameCropped.png',
     },
   };
 
