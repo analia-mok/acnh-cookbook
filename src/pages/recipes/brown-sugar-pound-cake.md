@@ -11,5 +11,7 @@ ingredients:
     id: 'brownSugar'
     type: 'misc'
     quantity: 1
+
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

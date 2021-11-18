@@ -19,5 +19,7 @@ ingredients:
     id: 'rare'
     quantity: 1
     type: 'mushy'
+
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

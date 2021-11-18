@@ -15,5 +15,6 @@ ingredients:
     id: 'coconut'
     quantity: 2
     type: 'crop'
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

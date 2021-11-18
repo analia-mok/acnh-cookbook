@@ -15,5 +15,7 @@ ingredients:
     id: 'cherry'
     quantity: 1
     type: 'crop'
+
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

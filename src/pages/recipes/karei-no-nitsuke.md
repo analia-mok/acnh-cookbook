@@ -8,5 +8,7 @@ ingredients:
     name: Dab
     type: 'fish'
     quantity: 1
+
+source: 'Catch a Dab'
 layout: '../../layouts/RecipeDetail.astro'
 ---

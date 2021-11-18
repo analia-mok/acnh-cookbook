@@ -7,5 +7,6 @@ ingredients:
     id: 'flour'
     type: 'misc'
     quantity: 3
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

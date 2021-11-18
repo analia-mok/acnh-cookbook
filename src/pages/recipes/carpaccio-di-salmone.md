@@ -8,5 +8,6 @@ ingredients:
     name: 'Salmon'
     type: 'fish'
     quantity: 1
+source: 'Catch a Salmon'
 layout: '../../layouts/RecipeDetail.astro'
 ---

@@ -7,5 +7,6 @@ ingredients:
     id: turnip
     type: 'crop'
     quantity: 10
+source: 'daisy_mae'
 layout: '../../layouts/RecipeDetail.astro'
 ---

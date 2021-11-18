@@ -8,5 +8,6 @@ ingredients:
     name: 'Barred-knifejaw'
     type: 'fish'
     quantity: 1
+source: 'Catch a barred Knifejaw'
 layout: '../../layouts/RecipeDetail.astro'
 ---

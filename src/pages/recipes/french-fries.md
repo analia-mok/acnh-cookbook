@@ -7,5 +7,6 @@ ingredients:
     id: 'potato'
     type: 'crop'
     quantity: 3
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

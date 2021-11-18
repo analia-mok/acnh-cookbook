@@ -8,7 +8,7 @@ ingredients:
     name: 'Anchovy'
     type: 'fish'
     quantity: 2
+
+source: 'Catch an anchovy'
 layout: '../../layouts/RecipeDetail.astro'
 ---
-
-Anchoas al Alillo

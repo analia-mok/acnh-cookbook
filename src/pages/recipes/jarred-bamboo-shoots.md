@@ -7,5 +7,7 @@ ingredients:
     id: bambooShoot
     type: 'crop'
     quantity: 3
+
+source: 'daisy_mae'
 layout: '../../layouts/RecipeDetail.astro'
 ---

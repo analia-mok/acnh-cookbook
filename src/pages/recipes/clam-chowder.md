@@ -11,5 +11,7 @@ ingredients:
     id: 'clam'
     quantity: 3
     type: 'crop'
+
+source: 'turkey_day'
 layout: '../../layouts/RecipeDetail.astro'
 ---

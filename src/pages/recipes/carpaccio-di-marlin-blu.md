@@ -8,5 +8,6 @@ ingredients:
     name: 'Blue Marlin'
     quantity: 1
     type: 'fish'
+source: 'Catch a Blue Marlin'
 layout: '../../layouts/RecipeDetail.astro'
 ---

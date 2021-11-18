@@ -11,6 +11,6 @@ ingredients:
     id: 'potato'
     quantity: 3
     type: 'crop'
-
+source: 'basic_cooking_recipes_diy'
 layout: '../../layouts/RecipeDetail.astro'
 ---

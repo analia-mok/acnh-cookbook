@@ -11,5 +11,6 @@ ingredients:
     id: 'potato'
     type: 'crop'
     quantity: 2
+source: 'turkey_day'
 layout: '../../layouts/RecipeDetail.astro'
 ---

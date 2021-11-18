@@ -23,5 +23,6 @@ ingredients:
     id: 'peach'
     quantity: 1
     type: 'crop'
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

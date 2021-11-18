@@ -11,5 +11,6 @@ ingredients:
     id: 'carrot'
     quantity: 3
     type: 'crop'
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

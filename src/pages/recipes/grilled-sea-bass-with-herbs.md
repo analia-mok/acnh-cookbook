@@ -12,5 +12,7 @@ ingredients:
     id: 'weed'
     type: 'misc'
     quantity: 5
+
+source: 'be_a_chef_diy_recipes_plus'
 layout: '../../layouts/RecipeDetail.astro'
 ---

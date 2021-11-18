@@ -7,5 +7,6 @@ ingredients:
     id: 'apple'
     type: 'crop'
     quantity: 2
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

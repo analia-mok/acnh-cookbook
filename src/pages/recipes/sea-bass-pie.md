@@ -12,5 +12,7 @@ ingredients:
     id: 'flour'
     type: 'misc'
     quantity: 3
+
+source: 'Catch a Sea Bass'
 layout: '../../layouts/RecipeDetail.astro'
 ---

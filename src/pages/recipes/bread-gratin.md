@@ -11,5 +11,6 @@ ingredients:
     id: 'wholeWheatFlour'
     type: 'misc'
     quantity: 2
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

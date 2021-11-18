@@ -13,5 +13,6 @@ ingredients:
     type: 'misc'
     quantity: 1
 
+source: 'Catch a horse mackerel'
 layout: '../../layouts/RecipeDetail.astro'
 ---

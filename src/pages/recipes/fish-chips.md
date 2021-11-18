@@ -12,5 +12,7 @@ ingredients:
     name: 'Dab'
     type: 'fish'
     quantity: 1
+
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---

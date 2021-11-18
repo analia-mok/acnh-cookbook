@@ -7,5 +7,6 @@ ingredients:
     id: 'sugarCane'
     type: 'crop'
     quantity: 5
+source: 'basic_cooking_recipes_diy'
 layout: '../../layouts/RecipeDetail.astro'
 ---
