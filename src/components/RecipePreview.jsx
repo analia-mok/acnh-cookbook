@@ -33,28 +33,46 @@ export default function RecipePreview({ recipe }) {
   }
 
   return (
-    <article class='flex flex-wrap w-full justify-center'>
-      <header class='mb-4 text-center w-full flex-grow'>
-        {recipe.thumbnail && (
-          <img
-            src={recipe.thumbnail}
-            alt={recipe.title}
-            className='inline-block mb-4'
-            loading='lazy'
-          />
-        )}
-        <a href={recipe.url} className='text-orange-900 hover:underline hover:text-orange-800'>
-          <h2 className='font-bold text-xl'>{recipe.title}</h2>
-        </a>
-      </header>
-      <span className='sr-only'>{ingredientAriaDescription}</span>
-      <ul className='list-none'>
-        {ingredients.map((item) => (
-          <li>
-            <IngredientPreview ingredient={item} />
-          </li>
-        ))}
-      </ul>
+    <article class='flex flex-wrap w-full justify-center relative px-6 pt-10 pb-8 bg-orange-50 border-8 border-white rounded-md shadow-md items-center h-full'>
+      {recipe.type === 'savory' && (
+        <img
+          className='w-8 absolute right-4 top-4'
+          src='https://acnhcdn.com/2.0/MenuIcon/DishesCropped.png'
+          alt='A covered dish icon'
+          title='Savory'
+        />
+      )}
+      {recipe.type === 'sweet' && (
+        <img
+          className='w-8 absolute right-4 top-4'
+          src='https://acnhcdn.com/2.0/MenuIcon/CandyCropped.png'
+          alt='A piece of round candy in an orange wrapper'
+          title='Sweet'
+        />
+      )}
+      <div className='flex flex-wrap justify-center'>
+        <header class='mt-6 md:mt-4 mb-6 text-center w-full flex-grow'>
+          {recipe.thumbnail && (
+            <img
+              src={recipe.thumbnail}
+              alt={recipe.title}
+              className='inline-block mb-4'
+              loading='lazy'
+            />
+          )}
+          <a href={recipe.url} className='text-orange-900 hover:underline hover:text-orange-800'>
+            <h2 className='font-bold text-xl'>{recipe.title}</h2>
+          </a>
+        </header>
+        <span className='sr-only'>{ingredientAriaDescription}</span>
+        <ul className='list-none'>
+          {ingredients.map((item) => (
+            <li>
+              <IngredientPreview ingredient={item} />
+            </li>
+          ))}
+        </ul>
+      </div>
     </article>
   );
 }

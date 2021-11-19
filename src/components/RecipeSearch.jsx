@@ -102,7 +102,7 @@ export default function RecipeSearch({ recipes }) {
       <section class='container mx-auto' aria-label='Recipes list'>
         <div class='flex flex-wrap flex-shrink'>
           {items.map((r) => (
-            <div class='recipe-wrapper w-full md:w-1/3 xl:w-1/4 px-6 py-8 mx-8 md:mx-4 mb-8 bg-orange-50 border-8 border-white rounded-md shadow-md flex items-center'>
+            <div class='recipe-wrapper w-full md:w-1/3 xl:w-1/4 mx-8 md:mx-4 mb-8'>
               <RecipePreview recipe={r} />
             </div>
           ))}
