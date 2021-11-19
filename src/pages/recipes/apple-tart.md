@@ -3,17 +3,16 @@ title: 'Apple Tart'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrTartAppleCropped.png'
 type: sweet
 ingredients:
-  -
-    id: 'flour'
+  - id: 'flour'
     type: 'misc'
     quantity: 1
-  -
-    id: 'sugar'
+  - id: 'sugar'
     type: 'misc'
     quantity: 1
-  -
-    id: 'apple'
+  - id: 'apple'
     type: 'crop'
     quantity: 1
+
+source: 'villagers, bottles'
 layout: '../../layouts/RecipeDetail.astro'
 ---
