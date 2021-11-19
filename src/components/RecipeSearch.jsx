@@ -59,6 +59,9 @@ export default function RecipeSearch({ recipes }) {
     <>
       <section class='container mx-auto max-w-3xl pb-12'>
         <form action='#' class='flex justify-between flex-wrap sm:flex-nowrap mx-8'>
+          <label htmlFor='search' className='sr-only'>
+            Search by recipe name
+          </label>
           <input
             type='text'
             name='search'
@@ -77,6 +80,9 @@ export default function RecipeSearch({ recipes }) {
               border-2
               focus:border-orange-600 focus:ring-0'
           />
+          <label htmlFor='filter' className='sr-only'>
+            Filter recipes by type
+          </label>
           <select
             name='filters'
             id='filters'
