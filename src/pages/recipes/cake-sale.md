@@ -3,16 +3,13 @@ title: 'Cake Sale'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPoundcakeVegetableCropped.png'
 type: sweet
 ingredients:
-  -
-    id: 'flour'
+  - id: 'flour'
     type: 'misc'
     quantity: 2
-  -
-    id: 'carrot'
+  - id: 'carrot'
     type: 'crop'
     quantity: 1
-  -
-    id: 'potato'
+  - id: 'potato'
     type: 'crop'
     quantity: 1
 

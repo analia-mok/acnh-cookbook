@@ -3,12 +3,10 @@ title: 'Cookies'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrCookiePlainCropped.png'
 type: sweet
 ingredients:
-  -
-    id: 'flour'
+  - id: 'flour'
     type: 'misc'
     quantity: 1
-  -
-    id: 'sugar'
+  - id: 'sugar'
     type: 'misc'
     quantity: 1
 source: 'villagers, bottles'

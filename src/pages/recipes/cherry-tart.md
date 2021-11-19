@@ -3,16 +3,13 @@ title: 'Cherry Tart'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrTartCherryCropped.png'
 type: sweet
 ingredients:
-  -
-    id: 'flour'
+  - id: 'flour'
     quantity: 1
     type: 'misc'
-  -
-    id: 'sugar'
+  - id: 'sugar'
     quantity: 1
     type: 'misc'
-  -
-    id: 'cherry'
+  - id: 'cherry'
     quantity: 1
     type: 'crop'
 

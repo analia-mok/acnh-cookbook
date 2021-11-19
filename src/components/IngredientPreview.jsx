@@ -4,23 +4,23 @@ export default function IngredientPreview({ ingredient }) {
   const misc = {
     flour: {
       title: 'Flour',
-      image: 'FlourWheatCropped.png'
+      image: 'FlourWheatCropped.png',
     },
     wholeWheatFlour: {
       title: 'Whole-Wheat Flour',
-      image: 'FlourWheatwholeCropped.png'
+      image: 'FlourWheatwholeCropped.png',
     },
     sugar: {
       title: 'Sugar',
-      image: 'FlourSugarCropped.png'
+      image: 'FlourSugarCropped.png',
     },
     brownSugar: {
       title: 'Brown Sugar',
-      image: 'FlourSugarbrownCropped.png'
+      image: 'FlourSugarbrownCropped.png',
     },
     tomatoPuree: {
       title: 'Tomato Puree',
-      image: 'FtrJarTomato.png'
+      image: 'FtrJarTomatoCropped.png',
     },
     weed: {
       title: 'Weed',
@@ -62,8 +62,20 @@ export default function IngredientPreview({ ingredient }) {
       image: 'PeachCropped.png',
     },
     pumpkin: {
-      title: 'Pumpkin',
+      title: 'Orange Pumpkin',
       image: 'SquashOrange.png',
+    },
+    white_pumpkin: {
+      title: 'White Pumpkin',
+      image: 'SquashWhite.png',
+    },
+    green_pumpkin: {
+      title: 'Green Pumpkin',
+      image: 'SquashGreen.png',
+    },
+    yellow_pumpkin: {
+      title: 'Yellow Pumpkin',
+      image: 'SquashYellow.png',
     },
     orange: {
       title: 'Orange',
@@ -131,6 +143,13 @@ export default function IngredientPreview({ ingredient }) {
     },
   };
 
+  const recipe = {
+    tomato_puree: {
+      title: 'Tomato Puree',
+      image: 'FtrJarTomato.png',
+    },
+  };
+
   let itemUrl = '';
   let name = ingredient.name || '';
 
@@ -138,6 +157,7 @@ export default function IngredientPreview({ ingredient }) {
     mushy: mushies,
     crop,
     misc,
+    recipe,
   };
 
   if (ingredient.type === 'fish') {
@@ -146,21 +166,32 @@ export default function IngredientPreview({ ingredient }) {
     const item = items[ingredient.type][ingredient.id];
 
     if (item) {
-      itemUrl = `https://acnhcdn.com/latest/MenuIcon/${item.image}`;
+      if (ingredient.type === 'recipe') {
+        itemUrl = `https://acnhcdn.com/2.0/CookingIcon/${item.image}`;
+      } else {
+        itemUrl = `https://acnhcdn.com/latest/MenuIcon/${item.image}`;
+      }
+
       name = item.title || '';
+    } else {
+      return '';
     }
   }
 
   return (
     <div>
-      <img src={itemUrl} alt={name} class="inline-block w-11 h-auto mb-2" loading="lazy" />
+      <img src={itemUrl} alt={name} class='inline-block w-11 h-auto mb-2' loading='lazy' />
       {ingredient.type === 'fish' && (
-        <a href={`/fish/${ingredient.id}`} class="hover:underline">
-          <span class="text-orange-900 font-medium mx-4">{name}</span>
+        <a href={`/fish/${ingredient.id}`} class='hover:underline'>
+          <span class='text-orange-900 font-medium mx-4'>{name}</span>
         </a>
       )}
-      {ingredient.type !== 'fish' && <span class="text-orange-900 font-medium ml-4 mr-2">{name}</span>}
-      <span class="bg-green-100 text-green-900 inline-block px-2 py-1 rounded-md font-medium">x {ingredient.quantity}</span>
+      {ingredient.type !== 'fish' && (
+        <span class='text-orange-900 font-medium ml-4 mr-2'>{name}</span>
+      )}
+      <span class='bg-green-100 text-green-900 inline-block px-2 py-1 rounded-md font-medium'>
+        x {ingredient.quantity}
+      </span>
     </div>
   );
 }

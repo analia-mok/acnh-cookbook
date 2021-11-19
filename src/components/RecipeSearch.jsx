@@ -2,15 +2,15 @@ import { h } from 'preact';
 import { useState } from 'preact/hooks';
 import RecipePreview from './RecipePreview';
 
-export default function RecipeSearch ({ recipes }) {
-  const [ search, setSearch ] = useState('');
-  const [ type, setType ] = useState('all');
-  const [ filters, setFilters ] = useState({
+export default function RecipeSearch({ recipes }) {
+  const [search, setSearch] = useState('');
+  const [type, setType] = useState('all');
+  const [filters, setFilters] = useState({
     search: '',
     type: 'all',
   });
 
-  const [ items, setItems ] = useState(recipes);
+  const [items, setItems] = useState(recipes);
 
   const handleSearch = (filters) => {
     const selectedType = filters.type;
@@ -19,11 +19,11 @@ export default function RecipeSearch ({ recipes }) {
     let results = recipes;
 
     if (selectedType !== 'all') {
-      results = results.filter(recipe => recipe.type === selectedType);
+      results = results.filter((recipe) => recipe.type === selectedType);
     }
 
     if (term.length) {
-      results = results.filter(i => i.title.toLowerCase().includes(term.toLowerCase()));
+      results = results.filter((i) => i.title.toLowerCase().includes(term.toLowerCase()));
     }
 
     setItems(results);
@@ -53,19 +53,19 @@ export default function RecipeSearch ({ recipes }) {
 
       return updatedFilters;
     });
-
   };
 
   return (
     <>
-      <section class="container mx-auto max-w-3xl pb-12">
-        <form action="#" class="flex justify-between flex-wrap sm:flex-nowrap mx-8">
-          <input type="text"
-            name="search"
-            id="search"
+      <section class='container mx-auto max-w-3xl pb-12'>
+        <form action='#' class='flex justify-between flex-wrap sm:flex-nowrap mx-8'>
+          <input
+            type='text'
+            name='search'
+            id='search'
             value={filters.search}
             onInput={handleTermChange}
-            class="
+            class='
               w-full
               sm:w-auto
               flex-grow
@@ -75,27 +75,28 @@ export default function RecipeSearch ({ recipes }) {
               rounded-md
               border-orange-800
               border-2
-              focus:border-orange-600 focus:ring-0"
+              focus:border-orange-600 focus:ring-0'
           />
-          <select name="filters"
-            id="filters"
+          <select
+            name='filters'
+            id='filters'
             value={filters.type}
             onChange={handleTypeChange}
-            class="w-full md:w-auto rounded-md border-orange-800 border-2 focus:border-orange-600 pl-6 focus:bg-white focus:ring-0"
+            class='w-full md:w-auto rounded-md border-orange-800 border-2 focus:border-orange-600 pl-6 focus:bg-white focus:ring-0'
           >
-            <option value="all" defaultChecked={true}>All</option>
-            <option value="savory">Savory</option>
-            <option value="sweet">Sweet</option>
-            <option value="misc">Misc</option>
+            <option value='all' defaultChecked={true}>
+              All
+            </option>
+            <option value='savory'>Savory</option>
+            <option value='sweet'>Sweet</option>
+            <option value='misc'>Misc</option>
           </select>
         </form>
       </section>
-      <section class="container mx-auto" aria-label="Recipes list">
-        <div class="flex flex-wrap flex-shrink">
-          {items.map(r => (
-            <div
-              class="recipe-wrapper w-full md:w-1/3 xl:w-1/4 px-6 py-8 mx-8 md:mx-4 mb-8 bg-orange-50 border-8 border-white rounded-md shadow-md flex items-center"
-            >
+      <section class='container mx-auto' aria-label='Recipes list'>
+        <div class='flex flex-wrap flex-shrink'>
+          {items.map((r) => (
+            <div class='recipe-wrapper w-full md:w-1/3 xl:w-1/4 px-6 py-8 mx-8 md:mx-4 mb-8 bg-orange-50 border-8 border-white rounded-md shadow-md flex items-center'>
               <RecipePreview recipe={r} />
             </div>
           ))}

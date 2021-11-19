@@ -3,12 +3,10 @@ title: 'Brown Sugar Pound Cake'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPoundcakeSugarbrownCropped.png'
 type: sweet
 ingredients:
-  -
-    id: 'flour'
+  - id: 'flour'
     type: 'misc'
     quantity: 2
-  -
-    id: 'brownSugar'
+  - id: 'brownSugar'
     type: 'misc'
     quantity: 1
 

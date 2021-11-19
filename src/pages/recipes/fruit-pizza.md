@@ -3,28 +3,22 @@ title: 'Fruit Pizza'
 thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrPizzaFruitsCropped.png'
 type: sweet
 ingredients:
-  -
-    id: 'flour'
+  - id: 'flour'
     quantity: 3
     type: 'misc'
-  -
-    id: 'apple'
+  - id: 'apple'
     quantity: 1
     type: 'crop'
-  -
-    id: 'pear'
+  - id: 'pear'
     quantity: 1
     type: 'crop'
-  -
-    id: 'cherry'
+  - id: 'cherry'
     quantity: 1
     type: 'crop'
-  -
-    id: 'orange'
+  - id: 'orange'
     quantity: 1
     type: 'crop'
-  -
-    id: 'peach'
+  - id: 'peach'
     quantity: 1
     type: 'crop'
 source: 'villagers, bottles'
