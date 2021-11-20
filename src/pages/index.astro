@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
+import BaseFooter from '../components/BaseFooter.astro';
 import Header from '../components/Header.astro';
 import RecipeSearch from '../components/RecipeSearch.jsx';
 
@@ -29,7 +30,7 @@ allRecipes = allRecipes.sort((a, b) => a.title.localeCompare(b.title));
     <BaseHead title={title} description={description} permalink={permalink} />
   </head>
 
-  <body class="font-serif">
+  <body>
     <Header />
     <div class="layout">
       <main class="content">
@@ -44,8 +45,6 @@ allRecipes = allRecipes.sort((a, b) => a.title.localeCompare(b.title));
         <RecipeSearch recipes={allRecipes} client:load />
       </main>
     </div>
-    <footer class="text-center py-16">
-      <p class="text-orange-800">Powered by <a href="https://astro.build/" class="underline">Astro</a> and <a href="https://tailwindcss.com/" class="underline">Tailwind CSS</a></p>
-    </footer>
+    <BaseFooter />
   </body>
 </html>

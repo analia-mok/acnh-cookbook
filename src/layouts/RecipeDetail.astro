@@ -1,21 +1,82 @@
 ---
-import { Markdown } from 'astro/components';
 import BaseHead from '../components/BaseHead.astro';
+import BaseFooter from '../components/BaseFooter.astro';
 import Header from '../components/Header.astro';
+import IngredientPreview from '../components/IngredientPreview.jsx';
+import { getIngredient } from '../utils/ingredientMap';
 
 const {content} = Astro.props;
-const {title, description, permalink} = content;
+const {title, thumbnail, source, ingredients, type} = content;
+
+let ingredientAriaDescription = 'requires ';
+const totalIngredients = ingredients.length;
+const lastIngredient = ingredients[totalIngredients - 1];
+let lastIngredientTitle = lastIngredient.name || '';
+
+if (lastIngredient.type !== 'fish') {
+  const lastIngredientInfo = getIngredient(lastIngredient.id, lastIngredient.type);
+  lastIngredientTitle = lastIngredientInfo.title;
+}
+
+if (totalIngredients === 1) {
+  ingredientAriaDescription += lastIngredient.quantity + ' ' + lastIngredientTitle;
+} else {
+  for (var i = 0; i < totalIngredients - 1; i++) {
+    let ingredient = ingredients[i];
+    let title = ingredient.name || '';
+
+    if (ingredient.type !== 'fish') {
+      const info = getIngredient(ingredient.id, ingredient.type);
+      title = info.title;
+    }
+
+    ingredientAriaDescription += `${ingredient.quantity} ${title}, `;
+  }
+
+  ingredientAriaDescription += `and ${lastIngredient.quantity} ${lastIngredientTitle}`;
+}
+
+let seoDescription = `A ${type} dish that ${ingredientAriaDescription}`;
+ingredientAriaDescription = `${title} ${ingredientAriaDescription}`;
 ---
 <html lang={ content.lang || 'en' }>
   <head>
-    <BaseHead title={title} description={description} permalink={permalink} />
+    <BaseHead title={`${title} | ACNH Cookbook`} description={seoDescription} permalink={Astro.request.canonicalURL} />
   </head>
 
   <body>
     <Header />
-    <!-- <BlogPost title={title} author={author} heroImage={heroImage} publishDate={publishDate} alt={alt}>
-      <slot />
-    </BlogPost> -->
+    <div class="max-w-5xl mx-auto px-4 md:px-8 mt-8">
+      <div class="flex w-full justify-center flex-row flex-wrap lg:flex-nowrap bg-orange-50 py-12 rounded-lg shadow-md">
+        <div class="flex-auto lg:flex-grow-0 w-full lg:w-auto lg:pr-20 lg:mr-20 border:none border-yellow-700 lg:border-r-2">
+          <article class="text-yellow-900 text-center font-medium">
+            <header>
+              <h1 class="text-4xl font-bold mb-6">{title}</h1>
+              <img src={thumbnail} alt={`In game thumbnail of ${title}`} class="inline-block mb-6" />
+            </header>
+            <p class="capitalize mb-2"><strong>Type: </strong> {type}</p>
+            <p><strong>Source: </strong> {source}</p>
+          </article>
+        </div>
+        <div class="flex-auto lg:flex-grow-0 w-full lg:w-auto">
+          <section class="mt-6 flex justify-center lg:justify-start">
+            <div class="inline-block">
+              <span role="presentation" class="w-8 h-1 block mx-auto mb-6 bg-yellow-600 text-center lg:hidden"></span>
+              <p class="sr-only">{ingredientAriaDescription}</p>
+              <h2 class="font-bold text-2xl text-center lg:text-left mb-6 text-yellow-900" aria-hidden="true">Ingredients:</h2>
+              <ul class='list-none'>
+                {ingredients.map((item) => (
+                  <li>
+                    <IngredientPreview ingredient={item} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <BaseFooter />
   </body>
 </html>
 

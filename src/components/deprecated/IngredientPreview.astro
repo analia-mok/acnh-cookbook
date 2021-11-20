@@ -1,4 +1,6 @@
 ---
+import { getIngredient } from '../../utils/ingredientMap';
+
 export interface Ingredient {
   id: string,
   name: string,
@@ -10,122 +12,23 @@ export interface Props {
   ingredient: Ingredient,
 }
 
-const misc = {
-  flour: {
-    title: 'Flour',
-    image: 'FlourWheatCropped.png'
-  },
-  wholeWheatFlour: {
-    title: 'Whole-Wheat Flour',
-    image: 'FlourWheatwholeCropped.png'
-  },
-  sugar: {
-    title: 'Sugar',
-    image: 'FlourSugarCropped.png'
-  },
-  brownSugar: {
-    title: 'Brown Sugar',
-    image: 'FlourSugarbrownCropped.png'
-  },
-};
-
-const crop = {
-  apple: {
-    title: 'Apple',
-    image: 'AppleCropped.png',
-  },
-  bambooShoot: {
-    title: 'Bamboo Shoot',
-    image: 'BanbooShoot.png',
-  },
-  carrot: {
-    title: 'Carrot',
-    image: 'CarrotCropped.png',
-  },
-  cherry: {
-    title: 'Cherry',
-    image: 'CherryCropped.png',
-  },
-  coconut: {
-    title: 'Coconut',
-    image: 'CoconutCropped.png',
-  },
-  potato: {
-    title: 'Potato',
-    image: 'PotatoCropped.png',
-  },
-  pear: {
-    title: 'Pear',
-    image: 'PearCropped.png',
-  },
-  peach: {
-    title: 'Peach',
-    image: 'PeachCropped.png',
-  },
-  pumpkin: {
-    title: 'Pumpkin',
-    image: 'SquashOrange.png',
-  },
-  orange: {
-    title: 'Orange',
-    image: 'OrangeCropped.png',
-  },
-  sugarCane: {
-    title: 'Sugarcane',
-    image: 'SugarCaneCropped.png',
-  },
-  wheat: {
-    title: 'Wheat',
-    image: 'WheatCropped.png',
-  },
-  // Not actual crops... all well.
-  scallop: {
-    title: 'Scallop',
-    image: 'HotateCropped.png',
-  },
-  clam: {
-    title: 'Clam',
-    image: 'ShellFishAsari.png',
-  },
-};
-
-const mushies = {
-  round: {
-    title: 'Round Mushroom',
-    image: 'Mush1.png',
-  },
-  skinny: {
-    title: 'Skinny Mushroom',
-    image: 'Mush2.png',
-  },
-  flat: {
-    title: 'Flat Mushroom',
-    image: 'Mush3.png',
-  },
-  rare: {
-    title: 'Rare Mushroom',
-    image: 'Mush4.png',
-  },
-};
-
 const { ingredient } = Astro.props;
 
 let itemUrl = '';
 let name = ingredient.name || '';
 
-const items = {
-  mushy: mushies,
-  crop,
-  misc,
-};
-
 if (ingredient.type === 'fish') {
   itemUrl = `https://acnhapi.com/v1/icons/fish/${ingredient.id}`;
 } else {
-  const item = items[ingredient.type][ingredient.id];
+  const item = getIngredient(ingredient.id, ingredient.type);
 
   if (item) {
-    itemUrl = `https://acnhcdn.com/latest/MenuIcon/${item.image}`;
+    if (ingredient.type === 'recipe') {
+      itemUrl = `https://acnhcdn.com/2.0/CookingIcon/${item.image}`;
+    } else {
+      itemUrl = `https://acnhcdn.com/latest/MenuIcon/${item.image}`;
+    }
+
     name = item.title || '';
   }
 }
