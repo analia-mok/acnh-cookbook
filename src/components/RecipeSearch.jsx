@@ -1,6 +1,8 @@
 import { h } from 'preact';
-import { useState } from 'preact/hooks';
+import { useCallback, useState } from 'preact/hooks';
+import Fuse from 'fuse.js';
 import RecipePreview from './RecipePreview';
+import { debounce } from 'lodash';
 
 export default function RecipeSearch({ recipes }) {
   const [search, setSearch] = useState('');
@@ -11,6 +13,18 @@ export default function RecipeSearch({ recipes }) {
   });
 
   const [items, setItems] = useState(recipes);
+  const searchOptions = {
+    includeScore: true,
+    keys: ['title', 'type', 'source'],
+    threshold: 0.45,
+    distance: 100,
+  };
+  const fuse = new Fuse(recipes, searchOptions);
+
+  const debouncedSearch = useCallback(
+    debounce((filters) => handleSearch(filters), 500),
+    []
+  );
 
   const handleSearch = (filters) => {
     const selectedType = filters.type;
@@ -18,12 +32,14 @@ export default function RecipeSearch({ recipes }) {
 
     let results = recipes;
 
-    if (selectedType !== 'all') {
-      results = results.filter((recipe) => recipe.type === selectedType);
+    if (term.length) {
+      results = fuse.search(term);
+      console.log(results);
+      results = results.map((result) => result.item);
     }
 
-    if (term.length) {
-      results = results.filter((i) => i.title.toLowerCase().includes(term.toLowerCase()));
+    if (selectedType !== 'all') {
+      results = results.filter((recipe) => recipe.type === selectedType);
     }
 
     setItems(results);
@@ -36,7 +52,8 @@ export default function RecipeSearch({ recipes }) {
         search: e.target.value,
       };
 
-      handleSearch(updatedFilters);
+      // handleSearch(updatedFilters);
+      debouncedSearch(updatedFilters);
 
       return updatedFilters;
     });
@@ -91,7 +108,7 @@ export default function RecipeSearch({ recipes }) {
             class='w-full md:w-auto rounded-md border-orange-800 border-2 focus:border-orange-600 pl-6 focus:bg-white focus:ring-0'
           >
             <option value='all' defaultChecked={true}>
-              All
+              Type: All
             </option>
             <option value='savory'>Savory</option>
             <option value='sweet'>Sweet</option>
@@ -106,6 +123,12 @@ export default function RecipeSearch({ recipes }) {
               <RecipePreview recipe={r} />
             </div>
           ))}
+          {items.length === 0 && (
+            <p className='max-w-2xl text-yellow-900 text-center mx-auto'>
+              Whoops! Looks like there aren't any recipes meeting your search criteria. Please try
+              again with a different keyword or filter
+            </p>
+          )}
         </div>
       </section>
     </>
