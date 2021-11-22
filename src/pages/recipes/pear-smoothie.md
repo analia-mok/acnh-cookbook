@@ -1,6 +1,6 @@
 ---
 title: 'Pear Smoothie'
-thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrSmoothieOrangeCropped.png'
+thumbnail: 'https://acnhcdn.com/2.0/CookingIcon/FtrSmoothiePearCropped.png'
 type: sweet
 ingredients:
   - id: 'pear'
