@@ -16,9 +16,9 @@ All commands are run from the root of the project, from a terminal:
 
 ## TODOs
 
-- [ ] Add remaining available recipes
-- [ ] Add where to find recipes
-- [ ] Implement detail pages for all recipes
+- [X] Add remaining available recipes
+- [X] Add where to find recipes
+- [X] Implement detail pages for all recipes
 - [ ] Implement detail pages for fish
 - [ ] Fix A11y issues
 
